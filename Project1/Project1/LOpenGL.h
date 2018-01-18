@@ -1,6 +1,5 @@
-/*This source code copyrighted by Lazy Foo' Productions (2004-2013)
-and may not be redistributed without written permission.*/
-//Version: 001
+/*Header files*/
+
 
 #ifndef LOPENGL_H
 #define LOPENGL_H
@@ -9,5 +8,6 @@ and may not be redistributed without written permission.*/
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <stdio.h>
+#include <ctime>
 
 #endif

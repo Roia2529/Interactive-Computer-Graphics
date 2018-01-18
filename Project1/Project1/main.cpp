@@ -3,8 +3,8 @@ and may not be redistributed without written permission.*/
 //Version: 001
 
 #include "LUtil.h"
-
-void runMainLoop( int val );
+#include "constant.h"
+//void runMainLoop( int val );
 /*
 Pre Condition:
  -Initialized freeGLUT
@@ -23,7 +23,10 @@ int main( int argc, char* args[] )
 	glutInitContextVersion( 2, 1 );
 
 	//Create Double Buffered Window
+    //Option: GLUT_RGBA, GLUT_DEPTH, GLUT_DOUBLE
+    //GLUT_DOUBLE use 2 buffer, one is saved for new drawing, and it replace the former one when change is done.
 	glutInitDisplayMode( GLUT_DOUBLE );
+    
 	glutInitWindowSize( SCREEN_WIDTH, SCREEN_HEIGHT );
 	glutCreateWindow( "OpenGL" );
 
@@ -35,23 +38,29 @@ int main( int argc, char* args[] )
 	}
 
 	//Set rendering function
-	glutDisplayFunc( render );
+	glutDisplayFunc( GLrender ); //put rendering func
+    glutKeyboardFunc(GLkeyboardInput);
+    
+    glutIdleFunc(GLidle);
 
 	//Set main loop
-	glutTimerFunc( 1000 / SCREEN_FPS, runMainLoop, 0 );
+	//glutTimerFunc( 1000 / SCREEN_FPS, runMainLoop, 0 );
 
 	//Start GLUT main loop
+    //This runs freeGLUT's internal main loop not our main loop.
 	glutMainLoop();
 
 	return 0;
 }
 
+/*
 void runMainLoop( int val )
 {
     //Frame logic
-    update();
-    render();
+    //GLupdate();
+    //GLrender();
 
     //Run frame one more time
     glutTimerFunc( 1000 / SCREEN_FPS, runMainLoop, val );
 }
+ */

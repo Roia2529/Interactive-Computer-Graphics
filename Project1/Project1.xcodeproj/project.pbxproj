@@ -32,6 +32,7 @@
 		F2B9F73A20107D0800D4FE96 /* LOpenGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOpenGL.h; sourceTree = "<group>"; };
 		F2B9F73B20107D0800D4FE96 /* LUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LUtil.cpp; sourceTree = "<group>"; };
 		F2B9F73C20107D0800D4FE96 /* LUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUtil.h; sourceTree = "<group>"; };
+		F2B9F73E201149B400D4FE96 /* constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				F2B9F73B20107D0800D4FE96 /* LUtil.cpp */,
 				F2B9F73C20107D0800D4FE96 /* LUtil.h */,
 				F2B9F72E200EA7C200D4FE96 /* main.cpp */,
+				F2B9F73E201149B400D4FE96 /* constant.h */,
 			);
 			path = Project1;
 			sourceTree = "<group>";

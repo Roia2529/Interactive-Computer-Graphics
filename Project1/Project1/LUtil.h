@@ -7,11 +7,7 @@ and may not be redistributed without written permission.*/
 
 #include "LOpenGL.h"
 #include <stdio.h>
-
-//Screen Constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
-const int SCREEN_FPS = 60;
+#include <time.h>
 
 bool initGL();
 /*
@@ -28,7 +24,7 @@ Side Effects:
  -Clear color is set to black
 */
 
-void update();
+void GLupdate();
 /*
 Pre Condition:
  -None
@@ -38,7 +34,7 @@ Side Effects:
  -None
 */
 
-void render();
+void GLrender();
 /*
 Pre Condition:
  -A valid OpenGL context
@@ -49,5 +45,9 @@ Side Effects:
  -Clears the color buffer
  -Swaps the front/back buffer
 */
+
+void GLkeyboardInput(unsigned char key, int x, int y);
+
+void GLidle();
 
 #endif
