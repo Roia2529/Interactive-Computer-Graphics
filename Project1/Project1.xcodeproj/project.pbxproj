@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F2B9F72F200EA7C200D4FE96 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2B9F72E200EA7C200D4FE96 /* main.cpp */; };
-		F2B9F737200EA81500D4FE96 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B9F736200EA81500D4FE96 /* GLUT.framework */; };
 		F2B9F739200EA83500D4FE96 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B9F738200EA83500D4FE96 /* OpenGL.framework */; };
+		F2B9F73D20107D0800D4FE96 /* LUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2B9F73B20107D0800D4FE96 /* LUtil.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +29,9 @@
 		F2B9F72E200EA7C200D4FE96 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F2B9F736200EA81500D4FE96 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		F2B9F738200EA83500D4FE96 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		F2B9F73A20107D0800D4FE96 /* LOpenGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOpenGL.h; sourceTree = "<group>"; };
+		F2B9F73B20107D0800D4FE96 /* LUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LUtil.cpp; sourceTree = "<group>"; };
+		F2B9F73C20107D0800D4FE96 /* LUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B9F739200EA83500D4FE96 /* OpenGL.framework in Frameworks */,
-				F2B9F737200EA81500D4FE96 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +66,9 @@
 		F2B9F72D200EA7C200D4FE96 /* Project1 */ = {
 			isa = PBXGroup;
 			children = (
+				F2B9F73A20107D0800D4FE96 /* LOpenGL.h */,
+				F2B9F73B20107D0800D4FE96 /* LUtil.cpp */,
+				F2B9F73C20107D0800D4FE96 /* LUtil.h */,
 				F2B9F72E200EA7C200D4FE96 /* main.cpp */,
 			);
 			path = Project1;
@@ -136,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B9F73D20107D0800D4FE96 /* LUtil.cpp in Sources */,
 				F2B9F72F200EA7C200D4FE96 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +240,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 57HFA229TN;
+				HEADER_SEARCH_PATHS = (
+					"\"/opt/X11/include\"",
+					"\"/usr/local/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"/usr/local/lib\"",
+					"\"/opt/X11/include\"",
+				);
+				OTHER_LDFLAGS = "-lGLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -242,6 +257,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 57HFA229TN;
+				HEADER_SEARCH_PATHS = (
+					"\"/opt/X11/include\"",
+					"\"/usr/local/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"/usr/local/lib\"",
+					"\"/opt/X11/include\"",
+				);
+				OTHER_LDFLAGS = "-lGLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
